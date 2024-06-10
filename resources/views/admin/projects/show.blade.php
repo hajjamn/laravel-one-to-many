@@ -13,11 +13,17 @@
 
         {{-- CARD BODY --}}
         <div class="card-body">
-          <ul class="list-group">
-            
+
+          <ul class="list-group">  
             <li class="list-group-item">
               <span>
                 Nome repo: {{ $project->title }}
+              </span>
+            </li>
+
+            <li class="list-group-item">
+              <span>
+                Tipo di progetto: {{ $project->type_id}}
               </span>
             </li>
 
@@ -30,9 +36,17 @@
                 @endif
               </span>
             </li>
-
           </ul>
+
         </div>
+
+        {{-- CARD FOOTER --}}
+        <div class="card-footer">
+
+          
+
+        </div>
+
       </div>
     </div>
   </section>
