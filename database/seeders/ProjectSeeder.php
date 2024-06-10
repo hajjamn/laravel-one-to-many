@@ -27,7 +27,10 @@ class ProjectSeeder extends Seeder
 
             $project->description = $faker->optional()->text(200);
 
+            /* $project->table_id = $faker->numberBetween(1, 2); */
+
             $project->save();
+
         }
     }
 }
