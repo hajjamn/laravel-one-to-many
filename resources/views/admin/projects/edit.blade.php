@@ -26,7 +26,7 @@
     
             <div class="mb-3">
               <label for="repo" class="form-label">Git Repository</label>
-              <input type="url" name="repo" class="form-control" id="repo" placeholder="repo-name-example" value="{{ $project->repo }}">
+              <input type="text" name="repo" class="form-control" id="repo" placeholder="repo-name-example" value="{{ $project->repo }}">
             </div>
     
             <div class="mb-3">

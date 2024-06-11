@@ -31,7 +31,16 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|max:150',
+            'repo' => 'required|unique:projects',
+        ]);
+
+        $form_data = $request->all();
+
+        $new_project = Project::create($form_data);
+
+        return to_route('admin.projects.show', $new_project);
     }
 
     /**
