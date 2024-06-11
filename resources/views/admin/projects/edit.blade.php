@@ -13,7 +13,7 @@
 
         <div class="card-body py-3">
 
-          <form action="{{ route('admin.projects.update') }}" method="PUT">
+          <form action="{{ route('admin.projects.update', $project) }}" method="PUT">
 
             {{-- Cross Site Resource Forgery? --}}
             @csrf
@@ -31,10 +31,10 @@
     
             <div class="mb-3">
               <label for="description" class="form-label">Description</label>
-              <textarea class="form-control" name="description" id="description" rows="3" placeholder="Boolean is awesome!">value="{{ $project->description }}"</textarea>
+              <textarea class="form-control" name="description" id="description" rows="3" placeholder="Boolean is awesome!">{{ $project->description }}</textarea>
             </div>
     
-            <button class="btn btn-success">Create</button>
+            <button class="btn btn-primary">Edit</button>
 
           </form>
         </div>

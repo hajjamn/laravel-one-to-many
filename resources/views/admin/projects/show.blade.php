@@ -50,9 +50,11 @@
                 </a>
             </div>
             <div>
-              <a href="{{ route('admin.projects.destroy', $project) }}">
+              <form action="{{ route('admin.projects.destroy', $project) }}" method="POST">
+                @csrf
+                @method('DELETE')
                 <button class="btn btn-danger">Delete</button>
-              </a>
+              </form>
             </div>
           </div>
 
