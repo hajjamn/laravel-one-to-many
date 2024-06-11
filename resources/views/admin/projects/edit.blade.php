@@ -23,6 +23,18 @@
               <label for="title" class="form-label">Title</label>
               <input type="text" name="title" class="form-control" id="title" placeholder="Example Project Title" value="{{ $project->title }}">
             </div>
+
+            <div class="mb-3">
+              <label for="title" class="type_id">Title</label>
+              <select name="type_id" id="type_id" class="form-control">
+                <option value="">-- Select a type--</option>
+
+                @foreach ($types as $type)
+                    <option @selected($type->id == old('type_id')) value="{{ $type->id }}">{{ $type->name }}</option>
+                @endforeach
+
+              </select>
+            </div>
     
             <div class="mb-3">
               <label for="repo" class="form-label">Git Repository</label>

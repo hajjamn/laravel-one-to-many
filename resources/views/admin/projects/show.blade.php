@@ -17,13 +17,17 @@
           <ul class="list-group">  
             <li class="list-group-item">
               <span>
-                Nome repo: {{ $project->title }}
+                Nome repo: <a href="https://github.com/hajjamn/{{ $project->repo }}">{{ $project->repo }}</a>
               </span>
             </li>
 
             <li class="list-group-item">
               <span>
-                Tipo di progetto: {{ $project->type_id}}
+                @if ($project->type === null)
+                Tipo assente.
+              @else
+                Tipo: {{ $project->type->name}}
+              @endif
               </span>
             </li>
 

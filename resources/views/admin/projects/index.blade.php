@@ -20,9 +20,10 @@
         <thead>
           <tr>
             <th>ID</th>
-            <th>Nome</th>
+            <th>Name</th>
+            <th>Type</th>
             <th>Repo</th>
-            <th>Descrizione</th>
+            <th>Description</th>
             <th>{{-- fill --}}</th>
           </tr>
         </thead>
@@ -32,6 +33,7 @@
             <tr>
               <td>{{ $project->id}}</td>
               <td><a href="{{  route('admin.projects.show', $project) }}">{{  $project->title  }}</a></td>
+              <td>{{ optional($project->type)->name }}</td>
               <td><a href="https://github.com/hajjamn/{{ $project->repo }}">{{ $project->repo }}</a></td>
               <td>
                 {{ $project->description }}
