@@ -43,7 +43,18 @@
         {{-- CARD FOOTER --}}
         <div class="card-footer">
 
-          
+          <div class="d-flex">
+            <div class="me-3">
+              <a href="{{ route('admin.projects.edit', $project) }}">
+                <button class="btn btn-primary">Edit</button>
+                </a>
+            </div>
+            <div>
+              <a href="{{ route('admin.projects.destroy', $project) }}">
+                <button class="btn btn-danger">Delete</button>
+              </a>
+            </div>
+          </div>
 
         </div>
 
